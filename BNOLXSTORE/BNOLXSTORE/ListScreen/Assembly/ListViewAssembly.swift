@@ -40,7 +40,7 @@ private extension ListViewAssembly {
     func interactorModule(with presenter: ListViewInteractorOutput?) -> ListViewInteractor? {
         let interactor = ListViewInteractor()
         interactor.presenter = presenter
-        
+        interactor.getAddsList()
         return interactor
     }
     

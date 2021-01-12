@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50B52C525AD55060095D21A /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52C425AD55060095D21A /* NetworkingManager.swift */; };
+		A50B52CF25AD59410095D21A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52CE25AD59410095D21A /* EndPointType.swift */; };
+		A50B52D425AD59A20095D21A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52D325AD59A20095D21A /* HTTPMethod.swift */; };
+		A50B52DD25AD72BB0095D21A /* ListEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52DC25AD72BB0095D21A /* ListEndPoint.swift */; };
+		A50B52E625AD83270095D21A /* CodableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52E525AD83270095D21A /* CodableParser.swift */; };
 		A53D710225AD3D3100C22881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710125AD3D3100C22881 /* AppDelegate.swift */; };
 		A53D710425AD3D3100C22881 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710325AD3D3100C22881 /* SceneDelegate.swift */; };
 		A53D710625AD3D3100C22881 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710525AD3D3100C22881 /* SplashViewController.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A50B52C425AD55060095D21A /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		A50B52CE25AD59410095D21A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		A50B52D325AD59A20095D21A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A50B52DC25AD72BB0095D21A /* ListEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndPoint.swift; sourceTree = "<group>"; };
+		A50B52E525AD83270095D21A /* CodableParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableParser.swift; sourceTree = "<group>"; };
 		A53D70FE25AD3D3100C22881 /* BNOLXSTORE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNOLXSTORE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53D710125AD3D3100C22881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A53D710325AD3D3100C22881 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50B52C325AD54F70095D21A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A50B52E425AD82FE0095D21A /* DataParser */,
+				A50B52DB25AD71CE0095D21A /* EndPoint */,
+				A50B52CD25AD59210095D21A /* Service */,
+				A50B52CC25AD58C30095D21A /* Manager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A50B52CC25AD58C30095D21A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A50B52C425AD55060095D21A /* NetworkingManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A50B52CD25AD59210095D21A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A50B52CE25AD59410095D21A /* EndPointType.swift */,
+				A50B52D325AD59A20095D21A /* HTTPMethod.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A50B52DB25AD71CE0095D21A /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				A50B52DC25AD72BB0095D21A /* ListEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		A50B52E425AD82FE0095D21A /* DataParser */ = {
+			isa = PBXGroup;
+			children = (
+				A50B52E525AD83270095D21A /* CodableParser.swift */,
+			);
+			path = DataParser;
+			sourceTree = "<group>";
+		};
 		A53D70F525AD3D3100C22881 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +167,7 @@
 		A53D710025AD3D3100C22881 /* BNOLXSTORE */ = {
 			isa = PBXGroup;
 			children = (
+				A50B52C325AD54F70095D21A /* Networking */,
 				A53D710F25AD3D3300C22881 /* Info.plist */,
 				A53D710A25AD3D3300C22881 /* Assets.xcassets */,
 				A53D713A25AD40DF00C22881 /* AppDelegate */,
@@ -350,8 +405,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50B52CF25AD59410095D21A /* EndPointType.swift in Sources */,
+				A50B52DD25AD72BB0095D21A /* ListEndPoint.swift in Sources */,
 				A53D714825AD44A400C22881 /* ListViewAssembly.swift in Sources */,
+				A50B52D425AD59A20095D21A /* HTTPMethod.swift in Sources */,
 				A53D710625AD3D3100C22881 /* SplashViewController.swift in Sources */,
+				A50B52E625AD83270095D21A /* CodableParser.swift in Sources */,
 				A53D710225AD3D3100C22881 /* AppDelegate.swift in Sources */,
 				A53D716625AD472C00C22881 /* ListViewPresenterIO.swift in Sources */,
 				A53D715725AD45D800C22881 /* ListViewRouter.swift in Sources */,
@@ -359,6 +418,7 @@
 				A53D710425AD3D3100C22881 /* SceneDelegate.swift in Sources */,
 				A53D716125AD471F00C22881 /* ListViewInteractorIO.swift in Sources */,
 				A53D716B25AD476400C22881 /* ListViewRouterIO.swift in Sources */,
+				A50B52C525AD55060095D21A /* NetworkingManager.swift in Sources */,
 				A53D715C25AD470600C22881 /* ListViewController.swift in Sources */,
 				A53D714D25AD44C200C22881 /* ListViewInteractor.swift in Sources */,
 			);
