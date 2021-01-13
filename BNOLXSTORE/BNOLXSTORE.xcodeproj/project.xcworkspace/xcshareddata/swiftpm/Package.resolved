@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BTCacheManager",
+        "repositoryURL": "https://github.com/BaluNaik/BTCacheManager",
+        "state": {
+          "branch": "master",
+          "revision": "7360bf8d884053a41e2ed09db477c29e7e175178",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

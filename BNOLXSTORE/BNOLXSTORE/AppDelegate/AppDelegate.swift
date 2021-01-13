@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import BTCacheManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        BTCacheManager.shared.imageLimit = 20
+        BTCacheManager.shared.memoryLimit = 20 * 1024 * 1024
+        
         return true
     }
 

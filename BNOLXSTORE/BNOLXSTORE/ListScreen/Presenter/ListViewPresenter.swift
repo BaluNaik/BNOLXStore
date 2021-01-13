@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewPresenter: NSObject, ListViewPresenterInput, ListViewInteractorOutput {
+class ListViewPresenter: NSObject {
 
     private weak var userInterface: ListViewPresenterOutput?
     private var router: ListViewRouterInput?
@@ -24,6 +24,42 @@ class ListViewPresenter: NSObject, ListViewPresenterInput, ListViewInteractorOut
         self.init()
         self.userInterface = userInterface
         self.router = transitionHandler
+    }
+    
+}
+
+
+// MARK: - ListViewInteractorOutput
+
+extension ListViewPresenter: ListViewInteractorOutput {
+    
+    func showError(message: String) {
+        self.userInterface?.showLoader(status: false)
+        self.userInterface?.showError(message: message)
+    }
+    
+    func reloadContent() {
+        self.userInterface?.showLoader(status: false)
+        self.userInterface?.reloadContent()
+    }
+    
+}
+
+
+// MARK: - ListViewPresenterInput
+
+extension ListViewPresenter: ListViewPresenterInput {
+    
+    var rows: Int { return self.interactor?.rows ?? 0}
+    
+    func eventLoadData() {
+        self.interactor?.eventLoadData()
+        self.userInterface?.showLoader(status: true)
+    }
+    
+    func getClassifiedObject(for index: Int) -> ClassifiedData? {
+        
+        return self.interactor?.getClassifiedObject(for: index)
     }
     
 }

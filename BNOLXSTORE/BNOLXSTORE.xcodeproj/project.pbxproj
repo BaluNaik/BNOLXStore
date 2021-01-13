@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		A50B52D425AD59A20095D21A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52D325AD59A20095D21A /* HTTPMethod.swift */; };
 		A50B52DD25AD72BB0095D21A /* ListEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52DC25AD72BB0095D21A /* ListEndPoint.swift */; };
 		A50B52E625AD83270095D21A /* CodableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B52E525AD83270095D21A /* CodableParser.swift */; };
+		A50EBE7625AEAE6D00E12EBE /* Classified.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EBE7525AEAE6D00E12EBE /* Classified.swift */; };
+		A50EBE7E25AEAEC500E12EBE /* ClassifiedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EBE7D25AEAEC500E12EBE /* ClassifiedData.swift */; };
+		A50EBE8325AEAF6B00E12EBE /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EBE8225AEAF6B00E12EBE /* Pagination.swift */; };
+		A50EBE8C25AEB8A400E12EBE /* ClassifiedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EBE8B25AEB8A400E12EBE /* ClassifiedCell.swift */; };
+		A50EBE9925AED6A100E12EBE /* BTCacheManager in Frameworks */ = {isa = PBXBuildFile; productRef = A50EBE9825AED6A100E12EBE /* BTCacheManager */; };
 		A53D710225AD3D3100C22881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710125AD3D3100C22881 /* AppDelegate.swift */; };
 		A53D710425AD3D3100C22881 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710325AD3D3100C22881 /* SceneDelegate.swift */; };
 		A53D710625AD3D3100C22881 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D710525AD3D3100C22881 /* SplashViewController.swift */; };
@@ -52,6 +57,10 @@
 		A50B52D325AD59A20095D21A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A50B52DC25AD72BB0095D21A /* ListEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndPoint.swift; sourceTree = "<group>"; };
 		A50B52E525AD83270095D21A /* CodableParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableParser.swift; sourceTree = "<group>"; };
+		A50EBE7525AEAE6D00E12EBE /* Classified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classified.swift; sourceTree = "<group>"; };
+		A50EBE7D25AEAEC500E12EBE /* ClassifiedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedData.swift; sourceTree = "<group>"; };
+		A50EBE8225AEAF6B00E12EBE /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		A50EBE8B25AEB8A400E12EBE /* ClassifiedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedCell.swift; sourceTree = "<group>"; };
 		A53D70FE25AD3D3100C22881 /* BNOLXSTORE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNOLXSTORE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53D710125AD3D3100C22881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A53D710325AD3D3100C22881 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50EBE9925AED6A100E12EBE /* BTCacheManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +154,24 @@
 			path = DataParser;
 			sourceTree = "<group>";
 		};
+		A50EBE7425AEAC0C00E12EBE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A50EBE7525AEAE6D00E12EBE /* Classified.swift */,
+				A50EBE7D25AEAEC500E12EBE /* ClassifiedData.swift */,
+				A50EBE8225AEAF6B00E12EBE /* Pagination.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		A50EBE8725AEB86400E12EBE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A50EBE8B25AEB8A400E12EBE /* ClassifiedCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A53D70F525AD3D3100C22881 = {
 			isa = PBXGroup;
 			children = (
@@ -167,11 +195,12 @@
 		A53D710025AD3D3100C22881 /* BNOLXSTORE */ = {
 			isa = PBXGroup;
 			children = (
-				A50B52C325AD54F70095D21A /* Networking */,
 				A53D710F25AD3D3300C22881 /* Info.plist */,
 				A53D710A25AD3D3300C22881 /* Assets.xcassets */,
 				A53D713A25AD40DF00C22881 /* AppDelegate */,
+				A50EBE7425AEAC0C00E12EBE /* DataModel */,
 				A53D714125AD415300C22881 /* ListScreen */,
+				A50B52C325AD54F70095D21A /* Networking */,
 				A53D713C25AD412800C22881 /* Splash */,
 				A53D714025AD413E00C22881 /* UI */,
 			);
@@ -253,6 +282,7 @@
 		A53D714425AD43C600C22881 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A50EBE8725AEB86400E12EBE /* Cell */,
 				A53D715B25AD470600C22881 /* ListViewController.swift */,
 			);
 			path = View;
@@ -290,8 +320,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				A50EBE9E25AEDA2B00E12EBE /* PBXTargetDependency */,
 			);
 			name = BNOLXSTORE;
+			packageProductDependencies = (
+				A50EBE9825AED6A100E12EBE /* BTCacheManager */,
+			);
 			productName = BNOLXSTORE;
 			productReference = A53D70FE25AD3D3100C22881 /* BNOLXSTORE.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +397,9 @@
 				Base,
 			);
 			mainGroup = A53D70F525AD3D3100C22881;
+			packageReferences = (
+				A50EBE9725AED6A100E12EBE /* XCRemoteSwiftPackageReference "BTCacheManager" */,
+			);
 			productRefGroup = A53D70FF25AD3D3100C22881 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -409,17 +446,21 @@
 				A50B52DD25AD72BB0095D21A /* ListEndPoint.swift in Sources */,
 				A53D714825AD44A400C22881 /* ListViewAssembly.swift in Sources */,
 				A50B52D425AD59A20095D21A /* HTTPMethod.swift in Sources */,
+				A50EBE7625AEAE6D00E12EBE /* Classified.swift in Sources */,
 				A53D710625AD3D3100C22881 /* SplashViewController.swift in Sources */,
+				A50EBE7E25AEAEC500E12EBE /* ClassifiedData.swift in Sources */,
 				A50B52E625AD83270095D21A /* CodableParser.swift in Sources */,
 				A53D710225AD3D3100C22881 /* AppDelegate.swift in Sources */,
 				A53D716625AD472C00C22881 /* ListViewPresenterIO.swift in Sources */,
 				A53D715725AD45D800C22881 /* ListViewRouter.swift in Sources */,
+				A50EBE8325AEAF6B00E12EBE /* Pagination.swift in Sources */,
 				A53D715225AD44DA00C22881 /* ListViewPresenter.swift in Sources */,
 				A53D710425AD3D3100C22881 /* SceneDelegate.swift in Sources */,
 				A53D716125AD471F00C22881 /* ListViewInteractorIO.swift in Sources */,
 				A53D716B25AD476400C22881 /* ListViewRouterIO.swift in Sources */,
 				A50B52C525AD55060095D21A /* NetworkingManager.swift in Sources */,
 				A53D715C25AD470600C22881 /* ListViewController.swift in Sources */,
+				A50EBE8C25AEB8A400E12EBE /* ClassifiedCell.swift in Sources */,
 				A53D714D25AD44C200C22881 /* ListViewInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +484,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A50EBE9E25AEDA2B00E12EBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A50EBE9D25AEDA2B00E12EBE /* BTCacheManager */;
+		};
 		A53D711625AD3D3300C22881 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A53D70FD25AD3D3100C22881 /* BNOLXSTORE */;
@@ -745,6 +790,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A50EBE9725AED6A100E12EBE /* XCRemoteSwiftPackageReference "BTCacheManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BaluNaik/BTCacheManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A50EBE9825AED6A100E12EBE /* BTCacheManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50EBE9725AED6A100E12EBE /* XCRemoteSwiftPackageReference "BTCacheManager" */;
+			productName = BTCacheManager;
+		};
+		A50EBE9D25AEDA2B00E12EBE /* BTCacheManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50EBE9725AED6A100E12EBE /* XCRemoteSwiftPackageReference "BTCacheManager" */;
+			productName = BTCacheManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A53D70F625AD3D3100C22881 /* Project object */;
 }
