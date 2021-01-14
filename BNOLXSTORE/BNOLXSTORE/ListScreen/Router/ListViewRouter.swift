@@ -22,5 +22,14 @@ class ListViewRouter: NSObject, ListViewRouterInput {
         self.init()
         self.transitionHandler = handler
     }
+    
+    
+    // MARK: - ListViewRouterInput
+    
+    func showDetailsScreen(data: ClassifiedData) {
+        if let detailsVc = DetailsAssembly(data)?.viewModule() {
+            self.transitionHandler?.navigationController?.pushViewController(detailsVc, animated: true)
+        }
+    }
 
 }

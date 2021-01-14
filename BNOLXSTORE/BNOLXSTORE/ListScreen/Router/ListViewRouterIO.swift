@@ -8,5 +8,7 @@
 import UIKit
 
 protocol ListViewRouterInput: NSObject {
+    
+    func showDetailsScreen(data: ClassifiedData)
 
 }

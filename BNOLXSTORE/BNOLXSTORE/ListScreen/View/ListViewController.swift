@@ -76,7 +76,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let data = self.presenter?.getClassifiedObject(for: indexPath.row) {
+            self.presenter?.showDetailsScreen(data: data)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

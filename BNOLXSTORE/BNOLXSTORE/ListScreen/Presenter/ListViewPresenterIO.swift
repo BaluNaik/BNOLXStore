@@ -11,6 +11,7 @@ protocol ListViewPresenterInput: NSObject {
     func eventLoadData()
     var rows: Int { get }
     func getClassifiedObject(for index: Int) -> ClassifiedData?
+    func showDetailsScreen(data: ClassifiedData)
 }
 
 protocol ListViewPresenterOutput: NSObject {

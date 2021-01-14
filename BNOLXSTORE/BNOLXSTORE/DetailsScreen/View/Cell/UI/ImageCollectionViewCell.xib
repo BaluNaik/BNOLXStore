@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="BNOLXSTORE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dubizzle_logo" translatesAutoresizingMaskIntoConstraints="NO" id="UVl-pc-rXg">
+                        <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="0O6-5p-xYp">
+                        <rect key="frame" x="109" y="84.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Bcr-a0-Lbl"/>
+                            <constraint firstAttribute="width" constant="20" id="rO4-03-seI"/>
+                        </constraints>
+                        <color key="color" red="0.20000000000000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UVl-pc-rXg" secondAttribute="trailing" id="3cf-Cb-Smd"/>
+                <constraint firstAttribute="bottom" secondItem="UVl-pc-rXg" secondAttribute="bottom" id="Go5-ww-ldV"/>
+                <constraint firstItem="UVl-pc-rXg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tu0-N9-UIL"/>
+                <constraint firstItem="0O6-5p-xYp" firstAttribute="centerY" secondItem="UVl-pc-rXg" secondAttribute="centerY" id="aUM-V1-p52"/>
+                <constraint firstItem="UVl-pc-rXg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gSW-wG-7mX"/>
+                <constraint firstItem="0O6-5p-xYp" firstAttribute="centerX" secondItem="UVl-pc-rXg" secondAttribute="centerX" id="wqA-lc-ckU"/>
+            </constraints>
+            <size key="customSize" width="238" height="189"/>
+            <connections>
+                <outlet property="loader" destination="0O6-5p-xYp" id="OLm-7m-vph"/>
+                <outlet property="productImageView" destination="UVl-pc-rXg" id="ETQ-81-7uE"/>
+            </connections>
+            <point key="canvasLocation" x="273.91304347826087" y="171.09375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dubizzle_logo" width="388" height="121.66666412353516"/>
+    </resources>
+</document>

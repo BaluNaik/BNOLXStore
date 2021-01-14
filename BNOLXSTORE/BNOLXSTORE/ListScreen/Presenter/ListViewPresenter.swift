@@ -62,4 +62,8 @@ extension ListViewPresenter: ListViewPresenterInput {
         return self.interactor?.getClassifiedObject(for: index)
     }
     
+    func showDetailsScreen(data: ClassifiedData) {
+        self.router?.showDetailsScreen(data: data)
+    }
+    
 }

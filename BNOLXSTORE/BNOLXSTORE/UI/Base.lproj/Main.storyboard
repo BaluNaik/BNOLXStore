@@ -135,6 +135,37 @@
             </objects>
             <point key="canvasLocation" x="1069.5652173913045" y="130.58035714285714"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="bLb-Hk-pAA">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="EYe-TT-hqW" customClass="DetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2iE-Gj-ORn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g2k-5h-XAF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EYe-TT-hqW" id="LmQ-H8-PwW"/>
+                                    <outlet property="delegate" destination="EYe-TT-hqW" id="cXg-IJ-cbE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sZd-ud-WzP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g2k-5h-XAF" firstAttribute="top" secondItem="2iE-Gj-ORn" secondAttribute="top" id="Av1-Bi-v0a"/>
+                            <constraint firstAttribute="bottom" secondItem="g2k-5h-XAF" secondAttribute="bottom" id="Idj-Op-XPq"/>
+                            <constraint firstItem="g2k-5h-XAF" firstAttribute="leading" secondItem="sZd-ud-WzP" secondAttribute="leading" id="PnT-2E-FDN"/>
+                            <constraint firstItem="g2k-5h-XAF" firstAttribute="trailing" secondItem="sZd-ud-WzP" secondAttribute="trailing" id="hJ8-1l-AAV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIJ-0n-dLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833.3333333333335" y="135.26785714285714"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dubizzle_logo" width="388" height="121.66666412353516"/>

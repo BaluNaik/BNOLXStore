@@ -15,8 +15,6 @@ class ListViewInteractor: NSObject, ListViewInteractorInput {
     weak var presenter: ListViewInteractorOutput?
     var networkManager = NetworkingManager()
     
-    
-    
     func eventLoadData() {
         networkManager.request(ListApi.getlist) {[weak self] (data, errorMesg) in
             if let errorText = errorMesg {

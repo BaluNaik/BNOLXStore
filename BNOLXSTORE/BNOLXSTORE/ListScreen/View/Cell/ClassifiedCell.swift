@@ -9,6 +9,7 @@ import UIKit
 import BTCacheManager
 
 class ClassifiedCell: UITableViewCell {
+    
     @IBOutlet weak var thumbnailImage: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var priceLable: UILabel!

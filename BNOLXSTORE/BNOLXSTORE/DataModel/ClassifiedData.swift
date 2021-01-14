@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ClassifiedData: Codable {
+@objc class ClassifiedData: NSObject, Codable {
     let createdAt : String?
     let price : String?
     let name : String?
@@ -26,7 +26,7 @@ struct ClassifiedData: Codable {
         case thumbnailsUrls = "image_urls_thumbnails"
     }
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
         price = try values.decodeIfPresent(String.self, forKey: .price)
@@ -36,5 +36,21 @@ struct ClassifiedData: Codable {
         imageUrls = try values.decodeIfPresent([String].self, forKey: .imageUrls)
         thumbnailsUrls = try values.decodeIfPresent([String].self, forKey: .thumbnailsUrls)
     }
+    
+    @objc func getName() -> String {
+        
+        return self.name ?? ""
+    }
+    
+    @objc func getPrice() -> String {
+        
+        return self.price ?? ""
+    }
+    
+    @objc func getPostedDate() -> String {
+        
+        return self.createdAt ?? ""
+    }
+    
 
 }
